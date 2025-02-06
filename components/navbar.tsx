@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { auth, signOut, signIn } from "@/auth";
-import { redirect } from "next/navigation";
 
 const Navbar = async() => {
 
@@ -24,13 +23,13 @@ const Navbar = async() => {
 
                             <form action={ async() => {
                                 'use server';
-                                await signOut( redirect("/") )
+                                await signOut();
                             }}>
                                 <button type="submit">Logout</button>
                             </form>
 
                             <Link href={`/user/${session?.user.id}`}>
-                                <span>Profile</span>
+                                <span>{session?.user?.name}</span>
                             </Link>
                         </>
                     ): (
