@@ -33,7 +33,7 @@ const Page = async({params} :{params: Promise<{id: string}>}) => {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> 
         </>
     );
 }
