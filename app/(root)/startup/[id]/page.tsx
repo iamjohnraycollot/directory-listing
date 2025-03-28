@@ -31,6 +31,7 @@ const Page = async({params} :{params: Promise<{id: string}>}) => {
                                 <p className='text-16-medium !text-black-300'>@{post.author.username}</p>
                             </div>
                         </Link>
+                        <p className='category-tag'>{post.category}</p>
                     </div>
                 </div>
             </section> 
